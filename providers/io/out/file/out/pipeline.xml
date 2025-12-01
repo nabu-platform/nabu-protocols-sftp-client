@@ -1,0 +1,10 @@
+<structure interface="nabu.frameworks.io.specs.transferOut" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.protocols.sftp.client.providers.io.out.file.properties" name="properties"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="nabu.protocols.sftp.client.types.SFTPConnectionDetails" minOccurs="0" name="connection"/>
+    <field comment="The name of the file" minOccurs="0" name="fileName" type="java.lang.String"/>
+    <structure definition="nabu.utils.types.UriComponents" minOccurs="0" name="components"/>
+    <field minOccurs="0" name="path" type="java.lang.String"/>
+</structure>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-05-23T09:07:14.542+02:00" lastModified="2023-05-23T11:07:50.448+02:00" leaf="true" version="6">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.frameworks.datastore.Services.store</references>
+    <references>nabu.protocols.sftp.client.providers.io.in.file.singleProperties</references>
+    <references>nabu.protocols.sftp.client.Services.properties</references>
+    <references>nabu.frameworks.io.specs.transferIn</references>
+    <references>java.lang.Long</references>
+    <references>nabu.protocols.sftp.client.Services.read</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+    <references>nabu.frameworks.io.specs.transferResult</references>
+    <references>nabu.protocols.sftp.client.providers.io.in.file.fileResult</references>
+</node>

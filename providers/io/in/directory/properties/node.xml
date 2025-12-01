@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2018-07-03T15:43:17.834+02:00" lastModified="2023-05-23T11:22:12.702+02:00" leaf="true" version="17">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.protocols.sftp.client.providers.io.basicProperties</references>
+    <references>java.net.URI</references>
+    <references>java.lang.String</references>
+    <references>java.lang.Boolean</references>
+</node>

@@ -1,0 +1,8 @@
+<structure interface="nabu.frameworks.io.specs.transferIn" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.protocols.sftp.client.providers.io.in.file.singleProperties" name="properties"/>
+    </structure>
+    <structure name="output" restrict="results">
+        <structure definition="nabu.protocols.sftp.client.providers.io.in.file.fileResult" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    </structure>
+</structure>

@@ -1,0 +1,145 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="91eed375-fa42-4852-a31d-9d277346c399"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="d2b68779ef41440081973bf990a4e05a"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="7f00dfacba9b41a4b747b0450cc55712"
+				serviceId="nabu.protocols.sftp.client.Services.connect"
+				resultName="result82f46e466c75460d9a67cd558c15798a"
+				temporaryMapping="true"
+				x="58"
+				y="91"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="07a6c23aecf0463d99d20e2ce08c7a58"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/host</from>
+				<to>host</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="dc307923ceb24aa487a4097e88c7f465"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/port</from>
+				<to>port</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="a59c2ad593984d32b2fbda19ddb6ebef"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/username</from>
+				<to>username</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="8c491443c0454f389fc63167a4646649"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/password</from>
+				<to>password</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="e28bbfc9be6b46ba90294e9616c5ca7e"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/properties/privateKey</from>
+				<to>privateKey</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="55f3ca5b4aed406abd096adbba6891fb"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result82f46e466c75460d9a67cd558c15798a/connection</from>
+			<to>connection</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="9421fbc8-5d6d-40e6-ae8d-25dd50da6c58"
+			lineNumber="3"
+			variable="result">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="2e38338f775343fb8478610fdde86b43"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="49235db1d772411da8f2abd6b40d1659"
+					serviceId="nabu.protocols.sftp.client.providers.io.in.file.singleFinalize"
+					resultName="resultd37b53b092f343e7905a79d51abd3a9b"
+					temporaryMapping="true"
+					x="153"
+					y="49"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="ce4f5b4752564ed78351ab69eb4896ad"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>connection/connectionId</from>
+					<to>properties/connectionId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1ce006c3b8144f13b4056d3c1cff7e8c"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result</from>
+					<to>results[0]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1b382134172846c4a3bd05cbee4d0cd5"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/properties/uri</from>
+					<to>properties/uri</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="75c07cca31424447ac18acd44b6b1ecc"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/properties/deleteOriginal</from>
+					<to>properties/deleteOriginal</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="6863bbf4d64f4f02accb72324c411666"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/properties/processedExtension</from>
+					<to>properties/processedExtension</to>
+				</steps>
+			</steps>
+		</steps>
+		<query>input/results</query>
+	</steps>
+</sequence>
