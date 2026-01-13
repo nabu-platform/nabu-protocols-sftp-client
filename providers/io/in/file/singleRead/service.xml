@@ -1,136 +1,71 @@
-<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		disabled="false"
-		id="5315e5836bf74e06a23b3b080fa31f73"
-		lineNumber="1">
-	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-			disabled="false"
-			id="1195f22e-5bca-4050-a47e-b2434789ed10"
-			lineNumber="2">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
-				disabled="false"
-				id="0baf1775-aa92-433d-9a36-19f2c9f0b544"
-				serviceId="nabu.frameworks.datastore.Services.store"
-				resultName="result82c812a540a8491e9e7a89a592c1fde8"
-				temporaryMapping="true"
-				x="439"
-				y="107"
-				invocationOrder="1"
-				asynchronous="false"
-				recache="false">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="42579256-4fcc-4bf2-93e3-ed8e15754df9"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+<sequence id="5315e5836bf74e06a23b3b080fa31f73">
+	<map id="1195f22e-5bca-4050-a47e-b2434789ed10">
+		<invoke id="0baf1775-aa92-433d-9a36-19f2c9f0b544"
+			invocationOrder="1"
+			resultName="result82c812a540a8491e9e7a89a592c1fde8"
+			serviceId="nabu.frameworks.datastore.Services.store"
+			x="439"
+			y="107">
+			<link id="42579256-4fcc-4bf2-93e3-ed8e15754df9">
 				<from>input/context</from>
 				<to>context</to>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="de81892828aa40c9ac187ebc04dcd729"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+			<link id="de81892828aa40c9ac187ebc04dcd729">
 				<from>resultd1851c21a6794e3c9379eb0742254b5d/stream</from>
 				<to>stream</to>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="bff92fa963cf4b15b8b0c2883766820a"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+			<link id="bff92fa963cf4b15b8b0c2883766820a">
 				<from>result042520129ada4bf3a5586a94e2c5929c/response/contentType</from>
 				<to>contentType</to>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="e9b163bde779433881d813c5f3a0eaa6"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+			<link id="e9b163bde779433881d813c5f3a0eaa6">
 				<from>result042520129ada4bf3a5586a94e2c5929c/response/name</from>
 				<to>name</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-				disabled="false"
-				id="4cd41f8a-90cf-4a89-87b6-d6ec97d1a6af"
-				mask="false"
-				optional="false"
-				fixedValue="false">
+			</link>
+		</invoke>
+		<link id="4cd41f8a-90cf-4a89-87b6-d6ec97d1a6af">
 			<from>result82c812a540a8491e9e7a89a592c1fde8/uri</from>
 			<to>output/results[0]/uri</to>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
-				disabled="false"
-				id="5772ab356d264d338f7968afb23ca614"
-				serviceId="nabu.protocols.sftp.client.Services.read"
-				resultName="resultd1851c21a6794e3c9379eb0742254b5d"
-				temporaryMapping="true"
-				x="54"
-				y="101"
-				invocationOrder="0"
-				asynchronous="false"
-				recache="false">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="f3fca0abe40245069947c321bdd0d5cd"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+		</link>
+		<invoke id="5772ab356d264d338f7968afb23ca614"
+			resultName="resultd1851c21a6794e3c9379eb0742254b5d"
+			serviceId="nabu.protocols.sftp.client.Services.read"
+			x="54"
+			y="101">
+			<link id="f3fca0abe40245069947c321bdd0d5cd">
 				<from>input/properties/connectionId</from>
 				<to>connectionId</to>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="7a6dffd2afdf492682e3c166319cb972"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+			<link id="7a6dffd2afdf492682e3c166319cb972">
 				<from>input/properties/uri</from>
 				<to>uri</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
-				disabled="false"
-				id="d25b808bb7b04a45b67ff67cfa07e844"
-				serviceId="nabu.protocols.sftp.client.Services.properties"
-				resultName="result042520129ada4bf3a5586a94e2c5929c"
-				temporaryMapping="true"
-				x="35"
-				y="215"
-				invocationOrder="0"
-				asynchronous="false"
-				recache="false">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="429306c181704fe882c3d5bf78a75480"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+		</invoke>
+		<invoke id="d25b808bb7b04a45b67ff67cfa07e844"
+			resultName="result042520129ada4bf3a5586a94e2c5929c"
+			serviceId="nabu.protocols.sftp.client.Services.properties"
+			x="35"
+			y="215">
+			<link id="429306c181704fe882c3d5bf78a75480">
 				<from>input/properties/connectionId</from>
 				<to>connectionId</to>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="8768ae42d180406a8026b78d6171d3fc"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+			<link id="8768ae42d180406a8026b78d6171d3fc">
 				<from>input/properties/uri</from>
 				<to>uri</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-				disabled="false"
-				id="724132101179411791815219ba4c9ea3"
-				mask="false"
-				optional="false"
-				fixedValue="false">
+			</link>
+		</invoke>
+		<link id="724132101179411791815219ba4c9ea3">
 			<from>input/properties/uri</from>
 			<to>output/results[0]/originalUri</to>
-		</steps>
-	</steps>
+		</link>
+		<link id="390323e4c8b94f2d884829a4c698a8b8">
+			<from>result042520129ada4bf3a5586a94e2c5929c/response/lastAccessed</from>
+			<to>output/results[0]/lastAccessed</to>
+		</link>
+		<link id="6ff78ded23d84508b4e185d7ce06712b">
+			<from>result042520129ada4bf3a5586a94e2c5929c/response/lastModified</from>
+			<to>output/results[0]/lastModified</to>
+		</link>
+	</map>
 </sequence>

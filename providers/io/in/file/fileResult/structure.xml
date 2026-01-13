@@ -1,3 +1,5 @@
 <structure name="fileResult" superType="nabu.frameworks.io.specs.transferResult">
     <field name="originalUri" type="java.net.URI"/>
+    <field minOccurs="0" name="lastAccessed" type="java.util.Date"/>
+    <field minOccurs="0" name="lastModified" type="java.util.Date"/>
 </structure>
